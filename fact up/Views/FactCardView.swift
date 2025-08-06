@@ -99,6 +99,12 @@ struct FactCardView: View {
                                 )
                             }
                             .padding(.horizontal, 20)
+                            
+                            // Add invisible spacer to extend the swipe area below buttons
+                            // This creates a larger touch target area while maintaining visual layout
+                            Spacer()
+                                .frame(height: 100)
+                                .contentShape(Rectangle())
                         }
                         .offset(y: dragOffset.height)
                         .gesture(
