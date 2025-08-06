@@ -35,6 +35,9 @@ struct FactCardView: View {
                     // Fact Text
                     if let fact = viewModel.currentFact {
                         VStack(spacing: 60) {
+                            // Add spacer at the top to push content down
+                            Spacer().frame(height: 40)
+                            
                             // Fact card with text
                             VStack(spacing: 16) {
                                 // Show translated text if available, otherwise show original
@@ -62,7 +65,7 @@ struct FactCardView: View {
                                 }
                             }
                             
-                            // Action buttons that move with the fact
+                            // Action buttons that move with the fact - reduced spacing to move buttons lower
                             HStack(spacing: 25) {
                                 // Favorite button
                                 ActionButton(
@@ -99,12 +102,7 @@ struct FactCardView: View {
                                 )
                             }
                             .padding(.horizontal, 20)
-                            
-                            // Add invisible spacer to extend the swipe area below buttons
-                            // This creates a larger touch target area while maintaining visual layout
-                            Spacer()
-                                .frame(height: 100)
-                                .contentShape(Rectangle())
+                            .padding(.bottom, 30) // Add padding at the bottom to position buttons closer to bottom
                         }
                         .offset(y: dragOffset.height)
                         .gesture(
@@ -182,6 +180,61 @@ struct FactCardView: View {
                                     }
                                 }
                         )
+                        
+                        // Add an invisible overlay that extends the swipe area to the bottom of the screen
+                        // This doesn't affect visual layout but makes the entire area swipeable
+                        Rectangle()
+                            .fill(Color.clear)
+                            .contentShape(Rectangle())
+                            .frame(height: geometry.size.height * 0.4)
+                            .position(x: geometry.size.width / 2, y: geometry.size.height - 80)
+                            .gesture(
+                                DragGesture()
+                                    .onChanged { value in
+                                        // Allow swiping up and down
+                                        dragOffset = value.translation
+                                        isDragging = true
+                                    }
+                                    .onEnded { value in
+                                        let threshold: CGFloat = 60
+                                        
+                                        if value.translation.height < -threshold {
+                                            // Swipe up to get new fact
+                                            isTransitioning = true
+                                            
+                                            // Stop any ongoing speech when changing facts
+                                            if viewModel.isSpeaking {
+                                                viewModel.stopSpeaking()
+                                            }
+                                            
+                                            // Slide current fact up and off screen
+                                            withAnimation(.easeInOut(duration: 0.5)) {
+                                                dragOffset.height = -geometry.size.height - 100
+                                            }
+                                            
+                                            // Load new fact after current one slides off
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                                viewModel.loadNewFact()
+                                                
+                                                // Reset position for new fact (slides up from bottom)
+                                                dragOffset.height = geometry.size.height + 100
+                                                
+                                                // Slide new fact into position
+                                                withAnimation(.easeOut(duration: 0.4)) {
+                                                    dragOffset = .zero
+                                                    isDragging = false
+                                                    isTransitioning = false
+                                                }
+                                            }
+                                        } else {
+                                            // Return to center if not past threshold
+                                            withAnimation(.spring()) {
+                                                dragOffset = .zero
+                                                isDragging = false
+                                            }
+                                        }
+                                    }
+                            )
                     } else if viewModel.isLoading {
                         // Loading state
                         VStack {
