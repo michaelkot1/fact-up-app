@@ -1,0 +1,25 @@
+App Icon for "Fact Up"
+
+Design Description:
+- A simple, modern design with a light blue background (#3498db)
+- A white speech bubble or thought bubble in the center
+- Inside the bubble, a white "F" letter in a clean, modern font
+- The icon should be simple, recognizable, and work well at small sizes
+- The icon should be 1024x1024 pixels for App Store submission
+
+This icon represents the app's purpose of displaying interesting facts to users. The speech bubble symbolizes information sharing, and the "F" stands for "Fact".
+
+To create this icon:
+1. Use an online icon generator like https://www.iconsgenerator.com/ or https://favicon.io/
+2. Create a square canvas of 1024x1024 pixels
+3. Set the background to light blue (#3498db)
+4. Add a white speech bubble or thought bubble icon in the center
+5. Add a large "F" letter in white inside the bubble
+6. Export as PNG in 1024x1024 resolution
+7. Add to the Xcode project's AppIcon.appiconset
+
+Once created, you'll need to add this icon to your Xcode project by:
+1. Opening the Assets.xcassets in Xcode
+2. Selecting the AppIcon set
+3. Dragging the 1024x1024 PNG into the appropriate slot
+4. Xcode will automatically generate all required icon sizes 

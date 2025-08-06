@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		70DB59692E4311EF00911BD0 /* Untitled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB59682E4311EE00911BD0 /* Untitled.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		70DB58C12E42857300911BD0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -23,15 +27,42 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		70DB59432E42BCFF00911BD0 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		70DB58B32E42857100911BD0 /* fact up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fact up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		70DB58C02E42857300911BD0 /* fact upTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fact upTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		70DB58CA2E42857300911BD0 /* fact upUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fact upUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70DB59682E4311EE00911BD0 /* Untitled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Untitled.swift; sourceTree = "<group>"; };
+		70DB596A2E4311F500911BD0 /* fact up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fact up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70DB596B2E4311F500911BD0 /* fact upTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fact upTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70DB596C2E4311F500911BD0 /* fact upUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fact upUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		70DB590C2E42B3FE00911BD0 /* Exceptions for "fact up" folder in "fact up" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Supporting Files/Info.plist",
+			);
+			target = 70DB58B22E42857100911BD0 /* fact up */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		70DB58B52E42857100911BD0 /* fact up */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				70DB590C2E42B3FE00911BD0 /* Exceptions for "fact up" folder in "fact up" target */,
+			);
 			path = "fact up";
 			sourceTree = "<group>";
 		};
@@ -78,18 +109,19 @@
 				70DB58B52E42857100911BD0 /* fact up */,
 				70DB58C32E42857300911BD0 /* fact upTests */,
 				70DB58CD2E42857300911BD0 /* fact upUITests */,
-				70DB58B42E42857100911BD0 /* Products */,
+				70DB59292E42BCFE00911BD0 /* Frameworks */,
+				70DB59682E4311EE00911BD0 /* Untitled.swift */,
+				70DB596A2E4311F500911BD0 /* fact up.app */,
+				70DB596B2E4311F500911BD0 /* fact upTests.xctest */,
+				70DB596C2E4311F500911BD0 /* fact upUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
-		70DB58B42E42857100911BD0 /* Products */ = {
+		70DB59292E42BCFE00911BD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				70DB58B32E42857100911BD0 /* fact up.app */,
-				70DB58C02E42857300911BD0 /* fact upTests.xctest */,
-				70DB58CA2E42857300911BD0 /* fact upUITests.xctest */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +134,7 @@
 				70DB58AF2E42857100911BD0 /* Sources */,
 				70DB58B02E42857100911BD0 /* Frameworks */,
 				70DB58B12E42857100911BD0 /* Resources */,
+				70DB59432E42BCFF00911BD0 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -114,7 +147,7 @@
 			packageProductDependencies = (
 			);
 			productName = "fact up";
-			productReference = 70DB58B32E42857100911BD0 /* fact up.app */;
+			productReference = 70DB596A2E4311F500911BD0 /* fact up.app */;
 			productType = "com.apple.product-type.application";
 		};
 		70DB58BF2E42857300911BD0 /* fact upTests */ = {
@@ -137,7 +170,7 @@
 			packageProductDependencies = (
 			);
 			productName = "fact upTests";
-			productReference = 70DB58C02E42857300911BD0 /* fact upTests.xctest */;
+			productReference = 70DB596B2E4311F500911BD0 /* fact upTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		70DB58C92E42857300911BD0 /* fact upUITests */ = {
@@ -160,7 +193,7 @@
 			packageProductDependencies = (
 			);
 			productName = "fact upUITests";
-			productReference = 70DB58CA2E42857300911BD0 /* fact upUITests.xctest */;
+			productReference = 70DB596C2E4311F500911BD0 /* fact upUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +229,7 @@
 			mainGroup = 70DB58AA2E42857100911BD0;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 70DB58B42E42857100911BD0 /* Products */;
+			productRefGroup = 70DB58AA2E42857100911BD0;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -236,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70DB59692E4311EF00911BD0 /* Untitled.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +356,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -380,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -400,11 +434,14 @@
 				DEVELOPMENT_TEAM = Y8SDGALAMG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "fact-up-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -412,9 +449,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codewithmikey.fact-up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -428,11 +469,14 @@
 				DEVELOPMENT_TEAM = Y8SDGALAMG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "fact-up-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,9 +484,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codewithmikey.fact-up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
